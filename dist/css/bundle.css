@@ -1,0 +1,10 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+.background {
+  padding: 100px;
+  color: #6e7379;
+  background: #262f40;
+  width: 400px;
+  height: 100vh; }
