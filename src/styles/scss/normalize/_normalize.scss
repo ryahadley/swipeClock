@@ -1,0 +1,15 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  background-color: transparent;
+  text-decoration: none;
+
+  &:active, :link, :visited, :hover {
+    text-decoration: none;
+    outline-width: 0;
+    color: inherit;
+  }
+}

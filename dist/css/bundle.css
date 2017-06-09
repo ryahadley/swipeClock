@@ -1,10 +1,72 @@
+.flex {
+  display: flex; }
+
 html, body {
   margin: 0;
   padding: 0; }
 
+a {
+  background-color: transparent;
+  text-decoration: none; }
+  a:active, a :link, a :visited, a :hover {
+    text-decoration: none;
+    outline-width: 0;
+    color: inherit; }
+
 .background {
-  padding: 100px;
+  padding-top: 80px;
   color: #6e7379;
   background: #262f40;
   width: 400px;
   height: 100vh; }
+  .background img {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px; }
+
+.link {
+  color: #fff; }
+  .link:hover {
+    color: #262f40; }
+
+.navbar-link {
+  padding: 20px;
+  align-items: center; }
+  .navbar-link:hover {
+    background: #fff; }
+
+.clockHover {
+  display: none; }
+
+.clock:hover .clockHover {
+  display: block; }
+
+.clock:hover .noClock {
+  display: none; }
+
+.dashboardHover {
+  display: none; }
+
+.dashboard:hover .dashboardHover {
+  display: block; }
+
+.dashboard:hover .noDashboard {
+  display: none; }
+
+.timeHover {
+  display: none; }
+
+.time:hover .timeHover {
+  display: block; }
+
+.time:hover .noTime {
+  display: none; }
+
+.calendarHover {
+  display: none; }
+
+.calendar:hover .calendarHover {
+  display: block; }
+
+.calendar:hover .noCalendar {
+  display: none; }

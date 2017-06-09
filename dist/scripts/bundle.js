@@ -22982,10 +22982,13 @@ module.exports = warning;
 module.exports = require('./lib/React');
 
 },{"./lib/React":71}],199:[function(require,module,exports){
-'use strict';
+"use strict";
 
 var React = require('react');
 var Router = require('react-router');
+var Link = Router.Link;
+var RouteHandler = require('react-router').RouteHandler;
+var Navbar = require('./common/navbar');
 
 var App = React.createClass({
   displayName: 'App',
@@ -22993,15 +22996,200 @@ var App = React.createClass({
   render: function render() {
     return React.createElement(
       'div',
-      { className: 'background' },
-      'Swipe'
+      { className: 'flex' },
+      React.createElement(Navbar, null),
+      React.createElement(
+        'div',
+        null,
+        React.createElement(RouteHandler, null)
+      )
     );
   }
 });
 
 module.exports = App;
 
-},{"react":198,"react-router":28}],200:[function(require,module,exports){
+},{"./common/navbar":200,"react":198,"react-router":28}],200:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var Navbar = React.createClass({
+  displayName: 'Navbar',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: 'background' },
+      React.createElement(
+        Link,
+        { to: 'dashboard', className: 'link' },
+        React.createElement(
+          'div',
+          { className: 'flex navbar-link dashboard' },
+          React.createElement('img', { className: 'dashboardHover', src: './images/dashboardHover.png' }),
+          React.createElement('img', { className: 'noDashboard', src: './images/dashboard.png' }),
+          React.createElement(
+            'div',
+            null,
+            'Dashboard'
+          )
+        )
+      ),
+      React.createElement(
+        Link,
+        { to: 'webclock', className: 'link' },
+        React.createElement(
+          'div',
+          { className: 'flex navbar-link clock' },
+          React.createElement('img', { className: 'clockHover', src: './images/clockHover.png' }),
+          React.createElement('img', { className: 'noClock', src: './images/clock.png' }),
+          React.createElement(
+            'div',
+            null,
+            'WebClock'
+          )
+        )
+      ),
+      React.createElement(
+        Link,
+        { to: 'timecard', className: 'link' },
+        React.createElement(
+          'div',
+          { className: 'flex navbar-link time' },
+          React.createElement('img', { className: 'timeHover', src: './images/timecardHover.png' }),
+          React.createElement('img', { className: 'noTime', src: './images/timecard.png' }),
+          React.createElement(
+            'div',
+            null,
+            'Time Card'
+          )
+        )
+      ),
+      React.createElement(
+        Link,
+        { to: 'schedule', className: 'link' },
+        React.createElement(
+          'div',
+          { className: 'flex navbar-link calendar' },
+          React.createElement('img', { className: 'calendarHover', src: './images/calendarHover.png' }),
+          React.createElement('img', { className: 'noCalendar', src: './images/calendar.png' }),
+          React.createElement(
+            'div',
+            null,
+            'Schedule'
+          )
+        )
+      )
+    );
+  }
+});
+
+module.exports = Navbar;
+
+},{"react":198,"react-router":28}],201:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var Dashboard = React.createClass({
+  displayName: 'Dashboard',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: '' },
+      React.createElement(
+        'h1',
+        null,
+        'Dashboard'
+      )
+    );
+  }
+});
+
+module.exports = Dashboard;
+
+},{"react":198,"react-router":28}],202:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var Schedule = React.createClass({
+  displayName: 'Schedule',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: '' },
+      React.createElement(
+        'h1',
+        null,
+        'Schedule'
+      )
+    );
+  }
+});
+
+module.exports = Schedule;
+
+},{"react":198,"react-router":28}],203:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var TimeCard = React.createClass({
+  displayName: 'TimeCard',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: '' },
+      React.createElement(
+        'h1',
+        null,
+        'Time Card'
+      )
+    );
+  }
+});
+
+module.exports = TimeCard;
+
+},{"react":198,"react-router":28}],204:[function(require,module,exports){
+"use strict";
+
+var React = require('react');
+var Router = require('react-router');
+var Link = Router.Link;
+
+var WebClock = React.createClass({
+  displayName: 'WebClock',
+
+  render: function render() {
+    return React.createElement(
+      'div',
+      { className: '' },
+      React.createElement(
+        'h1',
+        null,
+        'WebClock'
+      )
+    );
+  }
+});
+
+module.exports = WebClock;
+
+},{"react":198,"react-router":28}],205:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -23012,7 +23200,7 @@ Router.run(routes, function (Root) {
   React.render(React.createElement(Root, null), document.getElementById('app'));
 });
 
-},{"./routes":201,"react":198,"react-router":28}],201:[function(require,module,exports){
+},{"./routes":206,"react":198,"react-router":28}],206:[function(require,module,exports){
 "use strict";
 
 var React = require('react');
@@ -23024,13 +23212,21 @@ var NotFoundRoute = Router.NotFoundRoute;
 var Redirect = Router.Redirect;
 
 var App = require('./components/app');
+var Dashboard = require('./components/dashboard/dashboard');
+var Schedule = require('./components/schedule/schedule');
+var TimeCard = require('./components/timecard/timecard');
+var WebClock = require('./components/webclock/webclock');
 
 var routes = React.createElement(
   Route,
   { name: 'app', path: '/', handler: App },
-  React.createElement(DefaultRoute, { handler: App })
+  React.createElement(DefaultRoute, { handler: Dashboard }),
+  React.createElement(Route, { name: 'dashboard', handler: Dashboard }),
+  React.createElement(Route, { name: 'schedule', handler: Schedule }),
+  React.createElement(Route, { name: 'timecard', handler: TimeCard }),
+  React.createElement(Route, { name: 'webclock', handler: WebClock })
 );
 
 module.exports = routes;
 
-},{"./components/app":199,"react":198,"react-router":28}]},{},[200]);
+},{"./components/app":199,"./components/dashboard/dashboard":201,"./components/schedule/schedule":202,"./components/timecard/timecard":203,"./components/webclock/webclock":204,"react":198,"react-router":28}]},{},[205]);

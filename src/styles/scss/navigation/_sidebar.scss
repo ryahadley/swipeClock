@@ -1,12 +1,86 @@
-html, body {
-  margin: 0;
-  padding: 0;
-}
-
 .background {
-  padding: 100px;
+  padding-top: 80px;
   color: $grayFont;
   background: $mainColor;
   width: 400px;
   height: 100vh;
+
+  img {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+  }
+}
+
+.link {
+  color: $white;
+
+  &:hover {
+    color: $mainColor;
+  }
+}
+
+.navbar-link {
+  padding: 20px;
+  align-items: center;
+
+  &:hover {
+    background: $white;
+  }
+}
+
+.clockHover {
+  display: none;
+}
+
+.clock:hover {
+  & .clockHover{
+   display: block
+ }
+
+ & .noClock {
+   display: none;
+ }
+}
+
+.dashboardHover {
+  display: none;
+}
+
+.dashboard:hover {
+  & .dashboardHover{
+   display: block
+ }
+
+ & .noDashboard {
+   display: none;
+ }
+}
+
+.timeHover {
+  display: none;
+}
+
+.time:hover {
+  & .timeHover{
+   display: block
+ }
+
+ & .noTime {
+   display: none;
+ }
+}
+
+.calendarHover {
+  display: none;
+}
+
+.calendar:hover {
+  & .calendarHover{
+   display: block
+ }
+
+ & .noCalendar {
+   display: none;
+ }
 }
