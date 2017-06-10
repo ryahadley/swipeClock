@@ -11,7 +11,7 @@ const Dashboard = React.createClass({
         <div className="header">Dashboard</div>
 
         <div className="component-background flex flex-center">
-          <div className="font-48 about-page">Dashboard</div>
+          <div className="font-48 about-page">Dashboard Clocking out</div>
         </div>
       </div>
     );
