@@ -1,11 +1,11 @@
 "use strict";
 
-var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
+const React = require('react');
+const Router = require('react-router');
+const Link = Router.Link;
 
-var Schedule = React.createClass({
-  render: function() {
+const Schedule = React.createClass({
+  render: () => {
     return (
       <div className="">
         <h1>Schedule</h1>

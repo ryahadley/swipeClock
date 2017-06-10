@@ -1,14 +1,18 @@
 "use strict";
 
-var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
+const React = require('react');
+const Router = require('react-router');
+const Link = Router.Link;
 
-var Dashboard = React.createClass({
-  render: function() {
+const Dashboard = React.createClass({
+  render: () => {
     return (
-      <div className="">
-        <h1>Dashboard</h1>
+      <div>
+        <div className="header">Dashboard</div>
+
+        <div className="component-background flex flex-center">
+          <div className="font-48 about-page">Dashboard</div>
+        </div>
       </div>
     );
   }

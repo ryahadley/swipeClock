@@ -1,0 +1,16 @@
+.header {
+  padding: 40px;
+  text-align: right;
+  background: $white;
+  color: $grayFont;
+  box-shadow: 3px 10px 20px -3px $gray;
+}
+
+.about-page {
+  position: absolute;
+  top: 40%;
+}
+
+.component-background {
+  background: $background;
+}

@@ -12,7 +12,7 @@ const App = React.createClass({
     return (
         <div className="flex">
           <Navbar/>
-          <div>
+          <div className="full-width">
             <RouteHandler/>
           </div>
         </div>

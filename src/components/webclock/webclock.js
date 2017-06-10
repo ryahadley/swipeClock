@@ -1,11 +1,11 @@
 "use strict";
 
-var React = require('react');
-var Router = require('react-router');
-var Link = Router.Link;
+const React = require('react');
+const Router = require('react-router');
+const Link = Router.Link;
 
-var WebClock = React.createClass({
-  render: function() {
+const WebClock = React.createClass({
+  render: () => {
     return (
       <div className="">
         <h1>WebClock</h1>

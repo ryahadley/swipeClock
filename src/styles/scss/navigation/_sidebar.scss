@@ -12,6 +12,22 @@
   }
 }
 
+.active {
+  color: $mainColor !important;
+
+  & .navbar-link {
+    background: $white;
+
+    & .noIcon {
+      display: block;
+    }
+
+    & .icon {
+      display: none;
+    }
+  }
+}
+
 .link {
   color: $white;
 
@@ -26,61 +42,17 @@
 
   &:hover {
     background: $white;
+
+    & .noIcon {
+      display: block;
+    }
+
+    & .icon {
+      display: none;
+    }
   }
 }
 
-.clockHover {
+.noIcon {
   display: none;
-}
-
-.clock:hover {
-  & .clockHover{
-   display: block
- }
-
- & .noClock {
-   display: none;
- }
-}
-
-.dashboardHover {
-  display: none;
-}
-
-.dashboard:hover {
-  & .dashboardHover{
-   display: block
- }
-
- & .noDashboard {
-   display: none;
- }
-}
-
-.timeHover {
-  display: none;
-}
-
-.time:hover {
-  & .timeHover{
-   display: block
- }
-
- & .noTime {
-   display: none;
- }
-}
-
-.calendarHover {
-  display: none;
-}
-
-.calendar:hover {
-  & .calendarHover{
-   display: block
- }
-
- & .noCalendar {
-   display: none;
- }
 }

@@ -1,6 +1,10 @@
 @import 'globals/colors';
+@import 'globals/fonts';
+@import 'globals/global';
 @import 'globals/layout';
 
 @import 'normalize/normalize';
 
 @import 'navigation/sidebar';
+
+@import 'components/dashboard';

@@ -1,5 +1,68 @@
+html, body {
+  font-family: Arial; }
+
+.font-12 {
+  font-size: 12px; }
+
+.font-14 {
+  font-size: 14px; }
+
+.font-16 {
+  font-size: 16px; }
+
+.font-18 {
+  font-size: 18px; }
+
+.font-20 {
+  font-size: 20px; }
+
+.font-24 {
+  font-size: 24px; }
+
+.font-48 {
+  font-size: 48px; }
+
+.header {
+  padding: 40px;
+  text-align: right;
+  background: #fff;
+  color: #6e7379;
+  box-shadow: 3px 10px 20px -3px #888888; }
+
+.about-page {
+  position: absolute;
+  top: 40%; }
+
+.component-background {
+  background: #f7f7f7; }
+
+.margin-auto {
+  margin: auto; }
+
+.full-width {
+  width: 100%; }
+
+.full-height {
+  height: 100%; }
+
 .flex {
   display: flex; }
+
+.flex-center {
+  justify-content: center; }
+
+.flex-between {
+  justify-content: space-between; }
+
+.flex-around {
+  justify-content: space-around; }
+
+.vertical-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 html, body {
   margin: 0;
@@ -24,6 +87,15 @@ a {
     height: 25px;
     margin-right: 20px; }
 
+.active {
+  color: #262f40 !important; }
+  .active .navbar-link {
+    background: #fff; }
+    .active .navbar-link .noIcon {
+      display: block; }
+    .active .navbar-link .icon {
+      display: none; }
+
 .link {
   color: #fff; }
   .link:hover {
@@ -34,39 +106,10 @@ a {
   align-items: center; }
   .navbar-link:hover {
     background: #fff; }
+    .navbar-link:hover .noIcon {
+      display: block; }
+    .navbar-link:hover .icon {
+      display: none; }
 
-.clockHover {
-  display: none; }
-
-.clock:hover .clockHover {
-  display: block; }
-
-.clock:hover .noClock {
-  display: none; }
-
-.dashboardHover {
-  display: none; }
-
-.dashboard:hover .dashboardHover {
-  display: block; }
-
-.dashboard:hover .noDashboard {
-  display: none; }
-
-.timeHover {
-  display: none; }
-
-.time:hover .timeHover {
-  display: block; }
-
-.time:hover .noTime {
-  display: none; }
-
-.calendarHover {
-  display: none; }
-
-.calendar:hover .calendarHover {
-  display: block; }
-
-.calendar:hover .noCalendar {
+.noIcon {
   display: none; }

@@ -8,24 +8,24 @@ const Navbar = React.createClass({
   render: () => {
     return (
         <div className="background">
-          <Link to="dashboard" className="link">
+          <Link to="dashboard" activeClassName="active" className="link">
             <div className="flex navbar-link dashboard">
-              <img className="dashboardHover" src="./images/dashboardHover.png" /><img className="noDashboard" src="./images/dashboard.png" /><div>Dashboard</div>
+              <img className="noIcon" src="./images/dashboardHover.png" /><img className="icon" src="./images/dashboard.png" /><div>Dashboard</div>
             </div>
           </Link>
-          <Link to="webclock" className="link">
+          <Link to="webclock" activeClassName="active" className="link">
             <div className="flex navbar-link clock">
-              <img className="clockHover" src="./images/clockHover.png" /><img className="noClock" src="./images/clock.png" /><div>WebClock</div>
+              <img className="noIcon" src="./images/clockHover.png" /><img className="icon" src="./images/clock.png" /><div>WebClock</div>
             </div>
           </Link>
-          <Link to="timecard" className="link">
+          <Link to="timecard" activeClassName="active" className="link">
             <div className="flex navbar-link time">
-              <img className="timeHover" src="./images/timecardHover.png" /><img className="noTime" src="./images/timecard.png" /><div>Time Card</div>
+              <img className="noIcon" src="./images/timecardHover.png" /><img className="icon" src="./images/timecard.png" /><div>Time Card</div>
             </div>
           </Link>
           <Link to="schedule" className="link">
             <div className="flex navbar-link calendar">
-              <img className="calendarHover" src="./images/calendarHover.png" /><img className="noCalendar" src="./images/calendar.png" /><div>Schedule</div>
+              <img className="noIcon" src="./images/calendarHover.png" /><img className="icon" src="./images/calendar.png" /><div>Schedule</div>
             </div>
           </Link>
         </div>
